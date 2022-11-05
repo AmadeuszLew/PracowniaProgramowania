@@ -73,7 +73,7 @@ def redrawGameWindow():
         Enemy.draw(window)
     for bullet in bullets:
         bullet.draw(window)
-    #zawszeostatnie
+    #always_last
     pygame.display.update()
 ##
 font=pygame.font.SysFont('comicsans',30,True,True)
@@ -83,22 +83,11 @@ spaceship=player((x-100)/2,y-105,100,100)
 bullets=[]
 enemies=[]
 wave_lenght=0
-#enemies.append(Enemy(random.randint(0,x-100),0,100,100,10,pygame.image.load('img/enemy2.png'),1)) #enemi[0]
-#enemies.append(Enemy(random.randint(0,x-100),0,100,100,20,pygame.image.load('img/enemy1.png'),3)) #enemi[1]
-#enemies.append(Enemy(random.randint(0,x-100),0,100,100,50,pygame.image.load('img/enemy3.png'),2)) #enemi[2]
 on_window=[]
 score=1
 #mainloop
 while run:
     clock.tick(27)
-    # enemi  self.hitbox = (self.x, self.y, self.width, self.height)
-    # statek self.hitbox = (self.x + 30, self.y, 40, 40)
-    # dol st self.hitbox1 = (self.x, self.y + 40, 100, 60)
-    # if score%8==0:
-    #     i+=1
-    #     enemies.append(Enemy(random.randint(0, x - 100), 0, 100, 100, 10, pygame.image.load('img/enemy2.png'), 1))
-    #     break
-    #najutrosprobujforem
     if len(enemies)==0:
         wave_lenght+=3
         for i in range (wave_lenght):
@@ -124,7 +113,6 @@ while run:
                 bullet.y -=bullet.vel
             else:
                 bullets.pop(bullets.index(bullet))
-
     keys=pygame.key.get_pressed()
     if keys[pygame.K_LEFT] and spaceship.x>0:
         spaceship.x -= spaceship.vel
