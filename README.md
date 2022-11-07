@@ -1,6 +1,6 @@
 # 2D Spaceship Game
 
-![Alt text](img/read.png?raw=true "Title")
+![Alt text](img/game.gif?raw=true "Title")
 
 > Simple python project for my class
 
@@ -15,7 +15,7 @@
 
 ## Description
 
-We were given a task to create something in python. I've come up with the idea to create a game using pygame. Enemies level up, however, there's no mechanism for saving so the game takes 30sec up to a few minutes and the results are gone. I've no plans to develop further.
+We were given a task to create something in python. I've come up with the idea to create a game using pygame. Enemies level up, they shot faster at higher lvles, however, there's no mechanism for saving so the game takes 30sec up to a few minutes and the results are gone. 
 
 #### Technologies
 
